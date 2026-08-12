@@ -39,12 +39,13 @@ npm run lint    # ESLint (next/core-web-vitals)
 - **Tailwind CSS** with a small theme extension (`brand` cyan + `navy` scales,
   custom shadows) in `tailwind.config.js`, plus two shared component classes
   (`.container-page`, `.focus-ring`) in `globals.css`.
-- **lucide-react** for iconography. The brand logo is a custom
-  book-and-wave SVG (`components/icons/BookWaveMark.jsx`) recreated from the
-  supplied logo; it recolors per background (dark / light / cyan). Google/Apple
-  marks are hand-authored SVGs in `components/icons/BrandIcons.jsx` because
-  lucide no longer ships third-party logos. The browser tab icon lives at
-  `app/icon.svg`.
+- **lucide-react** for iconography. The brand logo is the supplied
+  `public/logo.png`; a mark-only cutout (`public/logo-mark.png`) and a white
+  variant for dark backgrounds (`public/logo-mark-white.png`) are rendered via
+  `next/image` in `components/icons/Logo.jsx`, with the wordmark kept as live
+  text. Google/Apple marks are hand-authored SVGs in
+  `components/icons/BrandIcons.jsx` because lucide no longer ships third-party
+  logos. The browser tab icon lives at `app/icon.png`.
 - **Poppins** loaded via `next/font/google`.
 
 ## Folder structure
